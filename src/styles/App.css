@@ -1,0 +1,186 @@
+/* Base styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.app-container {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background-color: #fafafa;
+}
+
+/* Background styling */
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.quote-card cite {
+  color: white;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.9), rgba(168, 85, 247, 0.9));
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.gradient-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.4;
+  animation: float 20s infinite;
+}
+
+.blob-1 {
+  width: 600px;
+  height: 600px;
+  background: linear-gradient(135deg, #a78bfa 0%, #818cf8 100%);
+  top: -10%;
+  right: -10%;
+  animation-delay: -5s;
+}
+
+.blob-2 {
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(135deg, #e879f9 0%, #c084fc 100%);
+  bottom: -15%;
+  left: -10%;
+  animation-delay: -2s;
+}
+
+.blob-3 {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(135deg, #93c5fd 0%, #60a5fa 100%);
+  top: 40%;
+  left: 30%;
+  animation-delay: 0s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(2%, 2%) rotate(5deg);
+  }
+  50% {
+    transform: translate(-1%, 4%) rotate(-5deg);
+  }
+  75% {
+    transform: translate(-3%, -2%) rotate(2deg);
+  }
+}
+
+/* Content styling */
+.content-container {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  z-index: 1;
+}
+
+.quote-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06),
+    0 0 0 1px rgba(255, 255, 255, 0.3) inset;
+  margin: 2rem 0;
+  transition: transform 0.2s ease;
+}
+
+.quote-card:hover {
+  transform: translateY(-2px);
+}
+
+.quote-card blockquote {
+  position: relative;
+  padding: 0.5rem 1.5rem;
+}
+
+.quote-card blockquote::before,
+.quote-card blockquote::after {
+  content: '"';
+  position: absolute;
+  font-size: 4em;
+  opacity: 0.15;
+  font-family: Georgia, serif;
+}
+
+.quote-card blockquote::before {
+  left: -0.5rem;
+  top: -1rem;
+}
+
+.quote-card blockquote::after {
+  right: -0.5rem;
+  bottom: -2rem;
+}
+
+/* Controls styling */
+.controls {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.controls button {
+  transition: all 0.2s ease;
+}
+
+.controls button:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .quote-card {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .quote-card blockquote {
+    font-size: 1.25rem;
+  }
+  
+  .gradient-blob {
+    filter: blur(60px);
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .app-container {
+    background-color: #111827;
+  }
+  
+  .quote-card {
+    background: rgba(17, 24, 39, 0.8);
+  }
+  
+  .quote-card blockquote {
+    color: #e5e7eb;
+  }
+  
+  .gradient-blob {
+    opacity: 0.2;
+  }
+}
