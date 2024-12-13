@@ -1,25 +1,49 @@
-# Inspirational Quotes Machine
+# Inspirational Random Quote Machine
 
-This is a modern web application built with React.js, designed to provide users with inspirational quotes based on selected categories or topics. It utilizes the Gemini AI API to fetch quotes and IndexedDB to cache them for offline access.
+## Description
+The Inspirational Random Quote Machine is a web application that provides users with random inspirational quotes based on a selected topic. Whether you need a boost of courage, love, or success, this app has you covered.
 
 ## Features
+- **Random Quotes**: Get a new quote each time you click the "Next Quote" button.
+- **Topic Selection**: Enter a topic to receive quotes related to that theme.
+- **Inspirational Authors**: Quotes from renowned authors like Bob Proctor, Wayne Dyer, and Esther Hicks.
 
-*   **Category-Based Quotes:** Users can search for inspirational quotes based on a topic, for example "love", "courage", "success" or "wisdom".
-*   **Dynamic Quote Display:** Fetches and displays batches of quotes, showing five quotes at a time.
-*   **Smooth Animations:** Uses `framer-motion` for smooth transitions and animations.
-*   **Share Functionality:** Allows users to easily share quotes on social media or via messaging apps.
-*   **IndexedDB Caching:** Caches fetched quotes using IndexedDB for offline access and faster loading times.
-* **Responsive Design**: The application is designed to work well on different sized screens.
-*   **Dark Mode Support:** Uses the user's system preferences for dark mode.
-*   **Error Handling:** Includes robust error handling and retry mechanisms for API calls.
+## Usage
+1. **Enter a Topic**: Type in a topic such as "courage," "love," or "success."
+2. **Get Quotes**: Click the "Get Quotes" button to receive a random quote related to your topic.
+3. **Next Quote**: Click the "Next Quote" button to see another quote.
 
-## Technologies Used
+## Example
+- **Topic**: Success
+- **Quote**: "You become what you think about most of the time." — Bob Proctor
 
-*   **React.js:** A JavaScript library for building user interfaces.
-*   **Vite:** A fast development build tool.
-*   **Tailwind CSS:** A utility-first CSS framework.
-*   **Framer Motion:** A library for creating animations.
-*   **Google Gemini AI API:** An API for fetching inspirational quotes.
-*   **IndexedDB:** A browser API for client-side storage.
-*   **Lucide-react**: An icon library for react.
-*   **PropTypes**: A library for validation of the properties of react components.
+## Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/randallawhitlock/inspirational-quote-machine.git  
+    ```
+2. Navigate to the project directory:
+
+    ```bash
+    cd quote-machine
+    ```
+3. Install dependencies:
+    
+    ```bash
+    npm install
+    ```
+
+4. Start the application:
+    ```bash
+    npm start
+    ```
+## Contributing
+Contributions are welcome! Please fork the repository and submit a pull request.
+
+## License
+This project is licensed under the MIT License.
+
+## Acknowledgements
+Quotes sourced from various inspirational authors.
+
+Developed with love and inspiration.

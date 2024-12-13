@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     globDirectory: 'dist/',
     globPatterns: ['**/*.{js,css,html,ico,png,jpg,jpeg,svg,mp3}'],
     swDest: 'dist/sw.js',
